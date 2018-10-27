@@ -7,6 +7,7 @@ import com.mongodb.MongoCredential;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
+import org.json.JSONObject;
 
 import java.util.Iterator;
 
@@ -29,6 +30,8 @@ public class MongoConnection {
         MongoCollection<Document> collection = database.getCollection("Users");
 
         FindIterable<Document> iterDoc = collection.find();
+
+       JSONObject jsonObject = iterDoc;
         int i = 1;
 
        // Getting the iterator
